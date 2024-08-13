@@ -1,0 +1,148 @@
+.wrapper {
+    max-width: 800px; /* Adjust width as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px; /* Optional padding */
+}
+
+/* Set a base font and colors */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Dark shade of black for text */
+    background-color: #f5f5f5; /* Light background for contrast */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style for the header */
+header {
+    text-align: center;
+    background: #282c34;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Style for headings */
+h1, h2, h3, h4 {
+    font-family: 'New Amsterdam', serif;
+    color: #333; /* Default color for headings */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #000; /* Black color for main heading */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333; /* Black color for subheadings */
+    border-bottom: 2px solid #000; /* Black border for separation */
+    padding-bottom: 5px;
+    margin: 20px 0 10px;
+}
+
+/* Style for paragraphs */
+p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333; /* Ensure paragraphs are dark for readability */
+}
+
+/* Style for lists - Colored circles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    position: relative;
+    padding: 10px 0 10px 40px; /* Space for the custom bullet */
+    margin: 5px 0;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom bullet with black circles */
+ul li::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #000; /* Black bullet color */
+    border-radius: 50%;
+}
+
+/* Style for links */
+a {
+    color: #030a0c; /* Blue color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(3, 3, 5); /* Slightly darker blue on hover */
+}
+
+/* Add padding to the sections */
+section {
+    padding: 20px;
+    margin: 10px 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the contact email is styled */
+a[href^="mailto:"] {
+    font-weight: bold;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #282c34;
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Responsive design */
+/* Print Styles */
+@media print {
+    body {
+        width: 210mm; /* A4 width */
+        height: 297mm; /* A4 height */
+        margin: 0; /* Remove margin */
+        padding: 20mm; /* Add padding around the content */
+        box-shadow: none; /* Remove box shadow */
+        background: none; /* Remove background */
+        color: #000; /* Ensure text is black for printing */
+    }
+
+    header, footer {
+        page-break-after: avoid;
+        text-align: center; /* Prevent breaking the header and footer */
+    }
+
+    section {
+        page-break-inside: avoid; /* Prevent breaking sections */
+    }
+
+    a {
+        color: #000; /* Ensure links are black for printing */
+    }
+
+    /* Hide icons for printing */
+    .contact-icons {
+        display: none; 
+    }
+} 
