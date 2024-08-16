@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightcyan;
+        }
+
+        .container{
+            max-width: 400px;
+            margin: 0 auto;
+            padding : 20px;
+            background-color: azure;
+            border-radius: 10px;
+        }
+
+        .form-group{
+            margin-bottom: 15px;
+        }
+
+        label{
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>HTML5 Input Examples</h2>
+    <form action="">
+        <label for="dateInput">Date:</label>
+        <input type="date" id="dateInput" name="dateInput"><br><br>
+        
+        <label for="numberInput">Number:</label>
+        <input type="number" id="numberInput" name="numberInput"><br><br>
+
+        <label for="rangeInput">Range:</label>
+        <input type="range" id="rangeInput" name="rangeInput" min="0" max="100"><br><br>
+
+        <label for="EmailInput">Email:</label>
+        <input type="email" id="EmailInput" name="EmailInput"><br><br>
+
+        <label for="SearchInput">Search:</label>
+        <input type="search" id="SearchInput" name="SearchInput"><br><br>
+
+        <label for="DetailsInput">Datalist</label>
+        <input type="text" id="DatalistInput" name="DatalistInput" list="fruits">
+
+        <datalist id="fruits">
+            <option value="Apple">
+            <option value="Banana">
+            <option value="Cherry">
+            <option value="Date">
+            <option value="Grape">
+            <option value="Kiwi">
+            <option value="Mango">
+            <option value="Orange">
+            <option value="Pineapple">
+            <option value="Strawberry">
+            <option value="Watermelon">
+        </datalist><br><br>
+
+        <button type="submit"> Submit </button>
+    </form>
+</body>
+</html>
