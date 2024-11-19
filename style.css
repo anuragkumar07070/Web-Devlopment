@@ -1,30 +1,51 @@
-body{
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-.container{
-    width: 900px;
-    height: 900px;
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+}
+main{
+    width: 904px;
+    height: 904px;
     margin: 0 auto;
     border: 2px solid black;
+}
+
+.container-1{
+    width: 100%;
+    height: 360px;
     display: flex;
     flex-wrap: wrap;
 
 }
 
-.color{
+.green, .yellow{
     height: 360px;
     width: 360px;
-    border: 1px solid green;
-    background-color: rgb(83, 206, 83);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.green-home{
+.green{
+    border: 1px solid #008000;
+    background-color: rgb(83, 206, 83);
+}
+
+.yellow{
+    border: 1px solid rgb(255, 255, 0);
+    background-color: rgb(248, 248, 28);
+}
+
+.green-home, .yellow-home{
     height: 240px;
     width: 240px;
     background-color: rgb(255, 255, 255);
@@ -46,15 +67,14 @@ body{
     width: 60px;
     height: 60px;
     border-radius: 100%;
-    background-color: rgb(83, 206, 83);
+    background-color: rgb(28, 206, 83);
     
 }
 
-.playground {
+.playground-1 {
     width: 180px;
     height: 360px;
     background-color: rgb(243, 241, 239);  /* Light background */
-    border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
     grid-template-rows: repeat(6, 1fr);    /* 3 equal-height rows */
@@ -62,6 +82,160 @@ body{
 }
 
 .area {
-    border: 10px;
-    position: relative;
+    border: 1px solid rgb(107, 107, 107);
+}
+
+
+/* Yellow BLOCK */
+.yellow-home-upper, .yellow-home-lower{
+    width: 240px;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.yellow-upper-circle, .yellow-lower-circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: rgb(248, 248, 38); 
+}
+
+
+
+
+/* Section 2 */
+
+.container-2{
+    width: 100%;
+    height: 180px;
+    display: flex;
+}
+
+.playground-2 , .playground-3{
+    width: 360px;
+    height: 180px;
+    background-color: rgb(243, 241, 239);  /* Light background */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 3 equal-width columns */
+    grid-template-rows: repeat(3, 1fr);    /* 3 equal-height rows */
+}
+
+.area {
+    border: 1px solid rgb(107, 107, 107);
+}
+
+.win-box{
+    height: 180px;
+    width: 180px;
+    border: 1px solid rgb(107,107,107);
+}
+
+
+
+/* Section 3 */
+
+.container-3{
+    width: 100%;
+    height: 360px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.red, .blue{
+    height: 360px;
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red{
+    border: 1px solid #ff0000;
+    background-color: rgb(255, 18, 18);
+}
+
+.blue{
+    border: 1px solid blue;
+    background-color: rgb(28, 28, 248);
+}
+
+.red-home, .blue-home{
+    height: 240px;
+    width: 240px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.red-home-upper, .red-home-lower{
+    width: 240px;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.red-upper-circle, .red-lower-circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: rgb(255, 18, 18);
+    
+}
+
+
+/* blue */
+.blue-home-upper, .blue-home-lower{
+    width: 240px;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.blue-upper-circle, .blue-lower-circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: rgb(28, 28, 248);
+    
+}
+
+
+.playground-4 {
+    width: 180px;
+    height: 360px;
+    background-color: rgb(243, 241, 239);  /* Light background */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    grid-template-rows: repeat(6, 1fr);    /* 3 equal-height rows */
+
+}
+
+.area {
+    border: 1px solid rgb(107, 107, 107);
+}
+
+
+/* First cell */
+.playground-1 .area:nth-child() {
+    background-color: red;
+}
+
+/* Last cell */
+.playground-1 .area:nth-child(17) {
+    background-color: blue;
+}
+
+/* Grid cell in a specific position, e.g., middle cell */
+.playground-1 .area:nth-child(6) {
+    background-color: yellow;
+}
+
+.playground-1 .area:nth-child() {
+    background-color: yellow;
 }
